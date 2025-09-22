@@ -14,7 +14,7 @@ function Portfolio() {
       title: "Portfolio Website",
       img: "https://media.istockphoto.com/id/682084406/photo/retouche-at-work.jpg?s=612x612&w=0&k=20&c=0M4EMaLiWFXBBGs2VCRbf0oe9Cn3ZaTnEeiIajkbGRU=", // screenshot of your portfolio website
       desc: "My personal portfolio built with React, Bootstrap, and modern UI design.",
-      link: "https://www.yourportfolio.com" // replace with your portfolio live link
+      link: "https://myportfolio-kappa-blush.vercel.app/" // replace with your portfolio live link
     },
     {
       title: "Admin Dashboard",

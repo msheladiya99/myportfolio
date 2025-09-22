@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-// import profilePic from "../assets/portfolio-pic1.png"; // <-- save your image in src/assets
+import "./Navbar.css";
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,18 +21,31 @@ function Navbar() {
           Meet<span>Sheladiya</span>
         </a>
 
+        {/* Hamburger Icon */}
+        <div
+          className={`menu-toggle ${menuOpen ? "active" : ""}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
         {/* Links */}
-        <ul className="nav-links d-flex mb-0">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#contact">Contact</a></li>
+        <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
+          <li><a href="#home" onClick={() => setMenuOpen(false)}>Home</a></li>
+          <li><a href="#about" onClick={() => setMenuOpen(false)}>About</a></li>
+          <li><a href="#services" onClick={() => setMenuOpen(false)}>Services</a></li>
+          <li><a href="#portfolio" onClick={() => setMenuOpen(false)}>Portfolio</a></li>
+          <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a></li>
         </ul>
 
         {/* Profile Picture */}
         <div className="profile-pic">
-          <img src="https://i.postimg.cc/wj7vmjTJ/portfolio-pic1.png" alt="Profile" />
+          <img
+            src="https://i.postimg.cc/wj7vmjTJ/portfolio-pic1.png"
+            alt="Profile"
+          />
         </div>
       </div>
     </nav>
