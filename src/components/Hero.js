@@ -30,7 +30,7 @@ function Hero() {
           {/* Right Side - Image */}
           <Col md={6} className="text-center">
             <img
-              src="https://i.postimg.cc/wj7vmjTJ/portfolio-pic1.png"
+              src="https://i.postimg.cc/fymN6kw6/POSTING.png"
               alt="Meet Sheladiya"
               className="hero-img"
             />
